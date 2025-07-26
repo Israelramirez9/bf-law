@@ -2,205 +2,204 @@
    LAYOUT STYLES
    ========================================== */
 
-   .layout {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .topNav {
-    display: flex;
-    padding-top: 1rem;
-  }
-  
-  .logoSection {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logoSection a {
-    display: flex;
-    align-items: center;
-  }
-  
-  .iconsSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-  }
-  
-  .menu {
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #001e6c;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .brand-logo {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .brand-logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #61dafb;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .brand-logo a:hover {
-    color: #21a1c4;
-  }
-  
-  .navigation ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .navigation li {
-    position: relative;
-  }
-  
-  .navigation a {
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-    display: block;
-  }
-  
-  /* ==========================================
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topNav {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.logoSection {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoSection a {
+  display: flex;
+  align-items: center;
+}
+
+.iconsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.menu {
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #001e6c;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.brand-logo a:hover {
+  color: #21a1c4;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation li {
+  position: relative;
+}
+
+.navigation a {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+}
+
+.navigation a:focus {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* ==========================================
      YELLOW BOTTOM BAR ANIMATION
      ========================================== */
-  
-  .navigation a::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #ffd700, #ffed4e);
-    border-radius: 2px;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform: translateX(-50%);
-    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
-  }
-  
-  .navigation a:hover::after {
-    width: calc(100% - 2rem);
-    box-shadow: 0 2px 12px rgba(255, 215, 0, 0.6);
-  }
-  
-  .navigation a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-    color: #ffffff;
-  }
-  
-  .navigation a:active {
-    transform: translateY(0);
-  }
-  
-  /* Active state for current page */
-  .navigation a.active::after {
-    width: calc(100% - 2rem);
-    background: linear-gradient(90deg, #ffd700, #ffed4e);
-    box-shadow: 0 2px 12px rgba(255, 215, 0, 0.8);
-  }
-  
-  .main {
-    flex: 1;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  /* ==========================================
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateX(-50%);
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.navigation a:hover::after {
+  width: calc(100% - 2rem);
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.6);
+}
+
+.navigation a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.navigation a:active {
+  transform: translateY(0);
+}
+
+/* Active state for current page */
+.navigation a.active::after {
+  width: calc(100% - 2rem);
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.8);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==========================================
      RESPONSIVE DESIGN
      ========================================== */
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .navigation ul {
-      gap: 1rem;
-    }
-  
-    .navigation a::after {
-      bottom: -6px;
-    }
-  
-    .navigation a:hover::after {
-      width: calc(100% - 1rem);
-    }
-  
-    .navigation a.active::after {
-      width: calc(100% - 1rem);
-    }
-  
-    .main {
-      padding: 1rem;
-    }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
   }
-  
-  /* ==========================================
+
+  .navigation ul {
+    gap: 1rem;
+  }
+
+  .navigation a::after {
+    bottom: -6px;
+  }
+
+  .navigation a:hover::after {
+    width: calc(100% - 1rem);
+  }
+
+  .navigation a.active::after {
+    width: calc(100% - 1rem);
+  }
+}
+
+/* ==========================================
      ENHANCED HOVER EFFECTS
      ========================================== */
-  
-  .navigation a {
-    overflow: visible;
+
+.navigation a {
+  overflow: visible;
+}
+
+/* Glow effect on hover */
+.navigation a:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Subtle pulse animation for the bar */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
   }
-  
-  /* Glow effect on hover */
-  .navigation a:hover {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  50% {
+    box-shadow: 0 2px 15px rgba(255, 215, 0, 0.7);
   }
-  
-  /* Subtle pulse animation for the bar */
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
-    }
-    50% {
-      box-shadow: 0 2px 15px rgba(255, 215, 0, 0.7);
-    }
-    100% {
-      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
-    }
+  100% {
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
   }
-  
-  .navigation a:hover::after {
-    animation: pulse 2s ease-in-out infinite;
-  }
-  
+}
+
+.navigation a:hover::after {
+  animation: pulse 2s ease-in-out infinite;
+}

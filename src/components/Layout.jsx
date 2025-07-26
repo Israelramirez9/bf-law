@@ -14,7 +14,7 @@ function Layout({ children }) {
           </div>
 
           <div className={styles.iconsSection}>
-            <span>Contact Info</span>
+            <span></span>
           </div>
         </div>
 
