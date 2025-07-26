@@ -1,4 +1,4 @@
-function Home() {
+export function Home() {
   return (
     <div>
       <h1>Bienvenido a BF Law</h1>
@@ -19,5 +19,3 @@ function Home() {
     </div>
   )
 }
-
-export default Home 

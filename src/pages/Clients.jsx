@@ -1,4 +1,4 @@
-function Services() {
+export function Clients() {
   const services = [
     {
       title: "Derecho Civil",
@@ -30,15 +30,15 @@ function Services() {
     <div>
       <h1>Nuestros Servicios</h1>
       <p>
-        Ofrecemos una amplia gama de servicios legales adaptados a las 
+        Ofrecemos una amplia gama de servicios legales adaptados a las
         necesidades específicas de cada cliente.
       </p>
-      
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-        gap: '2rem', 
-        marginTop: '2rem' 
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gap: '2rem',
+        marginTop: '2rem'
       }}>
         {services.map((service, index) => (
           <div key={index} style={{
@@ -67,4 +67,3 @@ function Services() {
   )
 }
 
-export default Services 
