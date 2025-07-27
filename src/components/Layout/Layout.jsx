@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png'
 import styles from './Layout.module.css'
+import { Footer } from '../Footer'
 
-function Layout({ children }) {
+export function Layout({ children }) {
   return (
     <div className={styles.layout}>
       <header className={styles.header}>
@@ -36,8 +37,8 @@ function Layout({ children }) {
       <main className={styles.main}>
         {children}
       </main>
+      <Footer />
     </div>
   )
 }
 
-export default Layout 

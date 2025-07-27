@@ -1,0 +1,204 @@
+/* footer.module.css */
+
+.footer {
+  padding: 4rem 1.5rem 2rem;
+  background-color: #f9fafb;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 5rem;
+  }
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+
+/* Contact Section */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.iconContainer {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #111827;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: white;
+}
+
+.contactInfo {
+  flex: 1;
+}
+
+.contactLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.contactValue {
+  font-size: 1rem;
+  color: #111827;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.directionsLink {
+  font-size: 0.875rem;
+  color: #3b82f6;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.directionsLink:hover {
+  color: #1d4ed8;
+}
+
+/* Navigation Section */
+.navigationSection {
+  /* Styles inherited from container */
+}
+
+.navigationList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navigationLink {
+  font-size: 1rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.25rem 0;
+}
+
+.navigationLink:hover {
+  color: #111827;
+}
+
+/* Opportunities Section */
+.opportunitiesSection {
+  /* Styles inherited from container */
+}
+
+.opportunitiesText {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cvButton:active {
+  transform: translateY(0);
+}
+
+.buttonIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+  .footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .footerGrid {
+    gap: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactItem {
+    gap: 0.875rem;
+  }
+
+  .iconContainer {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .icon {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .contactValue {
+    font-size: 0.95rem;
+  }
+
+  .cvButton {
+    max-width: 100%;
+  }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .footerGrid {
+    gap: 3.5rem;
+  }
+
+  .contactSection {
+    grid-column: 1 / -1;
+  }
+
+  .navigationSection,
+  .opportunitiesSection {
+    grid-column: span 1;
+  }
+}

@@ -1,57 +1,28 @@
 import { ImCalendar } from 'react-icons/im'
-import Banner from '../../assets/main_banner.png'
 import styles from './Home.module.css'
 import { TbTargetArrow } from 'react-icons/tb'
 import { TfiWorld } from 'react-icons/tfi'
-import { FaMedal, FaHandshake, FaRegLightbulb, FaVideo } from 'react-icons/fa'
-import { BiHeadphone } from 'react-icons/bi'
-import { BiShield } from 'react-icons/bi'
-import { LuZap } from 'react-icons/lu'
+import { FaMedal, FaVideo } from 'react-icons/fa'
+import { Banner } from './sections'
+import { services, servicesImages } from './constants'
+import { Card } from '../../components/Card'
+import LaHolando from '../../assets/la_holando.png'
+import Walmart from '../../assets/walmart.png'
+import Hsbc from '../../assets/hsbc.png'
+import Baggio from '../../assets/baggio.png'
+import Directv from '../../assets/directv.png'
+import { useNavigate } from 'react-router-dom'
 
 export function Home() {
 
-  const services = [
-    {
-      icon: FaHandshake,
-      title: "Asesoría",
-      subtitle: "personalizada",
-    },
-    {
-      icon: LuZap,
-      title: "Agilidad y",
-      subtitle: "Eficiencia",
-    },
-    {
-      icon: BiShield,
-      title: "Compromiso legal",
-      subtitle: "integral",
-    },
-    {
-      icon: BiHeadphone,
-      title: "Confidencialidad",
-      subtitle: "garantizada",
-    },
-    {
-      icon: FaRegLightbulb,
-      title: "Soluciones",
-      subtitle: "a medida",
-    }
-  ];
+  const navigate = useNavigate()
+
 
   return (
-    <div>
-      <div className={styles.bannerContainer}>
-        <img src={Banner} alt="BF Law" />
-        <div className={styles.bannerContent}>
-          <h2>Impulsamos negocios, Protegemos <span className={styles.highlight}>&nbsp;decisiones</span>.</h2>
-          <p>
-            Ofrecemos asesoría legal estratégica con foco en resultados comerciales.<br /><br />
-            Asistimos a empresas, startups, inversores y familias en cada paso clave de su camino.
-          </p>
-        </div>
-      </div>
+    <>
+      <Banner />
 
-      <div className={styles.container}>
+      <section className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.grid}>
             {/* Contenido Principal */}
@@ -62,7 +33,7 @@ export function Home() {
                 </h2>
 
                 <h1 className={styles.title}>
-                  BF  LAW es un e<span className={styles.highlight}>studio jurídico co</span>
+                  BF  LAW es un e<span className="highlight">studio jurídico co</span>
                   n una visión global y enfoque estratégico.
                 </h1>
 
@@ -72,9 +43,9 @@ export function Home() {
                 </p>
               </div>
 
-              <button className={styles.contactButton}>
+              <button className="primaryButton" onClick={() => navigate('/contact')}>
                 <span>Contáctenos</span>
-                <span className={styles.arrow}>›</span>
+                <span className="arrow">›</span>
               </button>
             </div>
 
@@ -126,7 +97,7 @@ export function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <section className={styles.section2}>
         <div className={styles.wrapperSection2}>
@@ -136,7 +107,7 @@ export function Home() {
                 <p className={styles.subtitle}>COMO LO HACEMOS</p>
 
                 <h2 className={styles.title2}>
-                  Brindamos <span className={styles.highlight}>soluciones legales</span>, diseñadas a
+                  Brindamos <span className="highlight">soluciones legales</span>, diseñadas a
                   medida para cada desafío empresarial.
                 </h2>
 
@@ -176,6 +147,50 @@ export function Home() {
           </div>
         </div>
       </section>
-    </div>
+
+      <section className={styles.section3}>
+        <p className={styles.subtitle}>NUESTRO ENFOQUE</p>
+        <h2 className={styles.title2}>
+          Transformamos necesidades en soluciones <br /><span className="highlight">legales efectivas</span>.
+        </h2>
+
+        <p className={styles.description3}>
+          Cada etapa del proceso legal está pensada para maximizar resultados y anticipar riesgos, con una mirada práctica del negocio.
+        </p>
+
+        <div className={styles.cardsWrapper}>
+          {servicesImages.map(({ description, image, title }, index) => {
+            return <Card key={index} title={title} description={description} image={image} />
+          })}
+        </div>
+
+      </section>
+
+      <section className={styles.section4}>
+        <div className={styles.wrapperSection4}>
+          <p className={styles.subtitle}>CONFÍA EN NOSOTROS</p>
+          <h2 className={styles.title2}>Nos eligen <span className="highlight">clientes</span> que reconocen <br />nuestro esfuerzo y dedicación en cada caso</h2>
+          <p className={styles.description3}>
+            Algunos de ellos con los que hemos trabajado:
+            <br />
+          </p>
+
+          <div className={styles.logosWrapper}>
+            <img src={LaHolando} alt="logo1" />
+            <img src={Walmart} alt="logo2" />
+            <img src={Hsbc} alt="logo3" />
+            <img src={Baggio} alt="logo4" />
+            <img src={Directv} alt="logo5" />
+          </div>
+
+          <div className={styles.clientsButtonWrapper}>
+            <button className="primaryButton" onClick={() => navigate('/clients')}>
+              <span>Ver más </span>
+              <span className="arrow">›</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }

@@ -1,0 +1,1 @@
+export { BannerSection as Banner } from "./Banner";

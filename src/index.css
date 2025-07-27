@@ -125,9 +125,12 @@ a {
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: #21a1c4;
+span.highlight {
   text-decoration: underline;
+  text-decoration-color: #fcd900;
+  text-underline-offset: 1px;
+  text-decoration-style: solid;
+  text-decoration-thickness: 8px;
 }
 
 /* ==========================================
@@ -154,6 +157,29 @@ button:focus {
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.primaryButton {
+  background-color: #335380;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.primaryButton:hover {
+  background-color: #1d4ed8;
+}
+
+.primaryButton .arrow {
+  font-size: 1.25rem;
 }
 
 /* ==========================================
