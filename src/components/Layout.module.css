@@ -96,10 +96,10 @@
   display: block;
 }
 
-.navigation a:focus {
+/* .navigation a:focus {
   outline: 2px solid #ffd700;
   outline-offset: 2px;
-}
+} */
 
 /* ==========================================
      YELLOW BOTTOM BAR ANIMATION
@@ -137,6 +137,12 @@
 /* Active state for current page */
 .navigation a.active::after {
   width: calc(100% - 2rem);
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.8);
+}
+
+.navigation a:focus::after {
+  width: 100%;
   background: linear-gradient(90deg, #ffd700, #ffed4e);
   box-shadow: 0 2px 12px rgba(255, 215, 0, 0.8);
 }
