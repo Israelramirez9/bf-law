@@ -38,14 +38,6 @@
   font-weight: 600;
 }
 
-.bannerContent h2 span {
-  text-decoration: underline;
-  text-decoration-color: #fcd900;
-  text-underline-offset: 1px;
-  text-decoration-style: solid;
-  text-decoration-thickness: 6px;
-}
-
 .bannerContent p {
   line-height: 20px;
 }
@@ -65,6 +57,10 @@
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
   align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -102,7 +98,7 @@
   margin: 0;
 }
 
-.title span {
+span.highlight {
   text-decoration: underline;
   text-decoration-color: #fcd900;
   text-underline-offset: 1px;
@@ -176,4 +172,189 @@
   color: #111827;
   margin: 0;
   font-size: 1rem;
+}
+
+/* ==========================================
+     LEGALES SECTION
+     ========================================== */
+
+/* layout.module.css */
+
+.section2 {
+  padding: 4rem 1.5rem;
+  background-image: url("../../assets/Background1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: transparent;
+}
+
+.wrapperSection2 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section2Top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.section2Bottom {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.container2 {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.header2 {
+  text-align: left;
+}
+
+.title2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.description2 {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.videoSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #374151;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.playButton:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.playIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #4b5563;
+}
+
+.videoText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.videoMeta {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.servicesFlex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.serviceCard {
+  text-align: center;
+  width: 100px;
+}
+
+.iconContainer {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  background-color: #fef3c7;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: #d97706;
+}
+
+.serviceTitle {
+  font-weight: 600;
+  color: #111827;
+}
+
+.serviceSubtitle {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .section2 {
+    padding: 3rem 1rem;
+  }
+
+  .title2 {
+    font-size: 1.875rem;
+  }
+
+  .videoSection {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .videoMeta {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .servicesFlex {
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
 }
