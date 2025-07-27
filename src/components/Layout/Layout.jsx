@@ -1,9 +1,21 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import styles from './Layout.module.css'
 import { Footer } from '../Footer'
+import { useEffect } from 'react';
 
 export function Layout({ children }) {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth' 
+    });
+  }, [pathname]);
+
   return (
     <div className={styles.layout}>
       <header className={styles.header}>
