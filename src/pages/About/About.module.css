@@ -1,0 +1,66 @@
+.section1Container {
+  padding: 4rem 1.5rem;
+  background-image: url("../../assets/Background1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: transparent;
+}
+
+.section1 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section2 {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  img {
+    max-width: 500px;
+    margin: 20px;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.section2Image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #020e4a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  line-height: 20px;
+}
+
+.section3 {
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.areasContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
