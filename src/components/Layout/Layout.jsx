@@ -1,20 +1,25 @@
-import { Link, useLocation } from 'react-router-dom'
-import logo from '../../assets/logo.png'
-import styles from './Layout.module.css'
-import { Footer } from '../Footer'
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import { Footer } from "../Footer";
+import styles from "./Layout.module.css";
 
 export function Layout({ children }) {
-
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth' 
+      behavior: "smooth",
     });
   }, [pathname]);
+
+  const isActiveRoute = (route) => {
+    if (route === "/" && pathname === "/") return true;
+    if (route !== "/" && pathname.startsWith(route)) return true;
+    return false;
+  };
 
   return (
     <div className={styles.layout}>
@@ -35,22 +40,56 @@ export function Layout({ children }) {
           <div className={styles.container}>
             <nav className={styles.navigation}>
               <ul>
-                <li><Link to="/">Inicio</Link></li>
-                <li><Link to="/about">Estudio</Link></li>
-                <li><Link to="/professionals">Profesionales</Link></li>
-                <li><Link to="/clients">Clientes</Link></li>
-                <li><Link to="/contact">Contacto</Link></li>
+                <li>
+                  <Link
+                    to="/"
+                    className={isActiveRoute("/") ? styles.active : ""}
+                  >
+                    Inicio
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/estudio"
+                    className={isActiveRoute("/estudio") ? styles.active : ""}
+                  >
+                    Estudio
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/profesionales"
+                    className={
+                      isActiveRoute("/profesionales") ? styles.active : ""
+                    }
+                  >
+                    Profesionales
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/clientes"
+                    className={isActiveRoute("/clientes") ? styles.active : ""}
+                  >
+                    Clientes
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contacto"
+                    className={isActiveRoute("/contacto") ? styles.active : ""}
+                  >
+                    Contacto
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
         </div>
       </header>
 
-      <main className={styles.main}>
-        {children}
-      </main>
+      <main className={styles.main}>{children}</main>
       <Footer />
     </div>
-  )
+  );
 }
-

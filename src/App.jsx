@@ -1,19 +1,22 @@
-import { Routes, Route } from 'react-router-dom'
-import { Layout } from './components/Layout'
-import { Home, About, Contact, Professionals, Clients } from './pages'
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { About, Clients, Contact, Home, Professionals } from "./pages";
+import { Providers } from "./providers";
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/professionals" element={<Professionals />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/clients" element={<Clients />} />
-      </Routes>
-    </Layout>
-  )
+    <Providers>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/estudio" element={<About />} />
+          <Route path="/profesionales" element={<Professionals />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="/clientes" element={<Clients />} />
+        </Routes>
+      </Layout>
+    </Providers>
+  );
 }
 
-export default App
+export default App;
