@@ -1,11 +1,65 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { Footer } from "../Footer";
 import styles from "./Layout.module.css";
 
+function MenuItems({ isActiveRoute, toggleMobileMenu }) {
+  return (
+    <>
+      <li>
+        <Link
+          to="/"
+          className={isActiveRoute("/") ? styles.active : ""}
+          onClick={toggleMobileMenu}
+        >
+          Inicio
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/estudio"
+          className={isActiveRoute("/estudio") ? styles.active : ""}
+          onClick={toggleMobileMenu}
+        >
+          Estudio
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/profesionales"
+          className={isActiveRoute("/profesionales") ? styles.active : ""}
+          onClick={toggleMobileMenu}
+        >
+          Profesionales
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/clientes"
+          className={isActiveRoute("/clientes") ? styles.active : ""}
+          onClick={toggleMobileMenu}
+        >
+          Clientes
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/contacto"
+          className={isActiveRoute("/contacto") ? styles.active : ""}
+          onClick={toggleMobileMenu}
+        >
+          Contacto
+        </Link>
+      </li>
+    </>
+  );
+}
 export function Layout({ children }) {
   const { pathname } = useLocation();
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo({
@@ -13,7 +67,17 @@ export function Layout({ children }) {
       left: 0,
       behavior: "smooth",
     });
+
+    if (window.innerWidth > 768) {
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+    }
   }, [pathname]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   const isActiveRoute = (route) => {
     if (route === "/" && pathname === "/") return true;
@@ -37,54 +101,37 @@ export function Layout({ children }) {
         </div>
 
         <div className={styles.menu}>
-          <div className={styles.container}>
-            <nav className={styles.navigation}>
-              <ul>
-                <li>
-                  <Link
-                    to="/"
-                    className={isActiveRoute("/") ? styles.active : ""}
+          <nav
+            className={`${styles.navigation} ${
+              isMobile && styles.navigationMobile
+            }`}
+          >
+            <ul>
+              {isMobile ? (
+                <>
+                  <li className={styles.hamburgerMenu}>
+                    <button onClick={toggleMobileMenu}>
+                      <GiHamburgerMenu /> Menu
+                    </button>
+                  </li>
+                  <div
+                    className={`${styles.mobileMenuItems} ${
+                      isMobileMenuOpen
+                        ? styles.mobileMenuOpen
+                        : styles.mobileMenuClosed
+                    }`}
                   >
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/estudio"
-                    className={isActiveRoute("/estudio") ? styles.active : ""}
-                  >
-                    Estudio
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/profesionales"
-                    className={
-                      isActiveRoute("/profesionales") ? styles.active : ""
-                    }
-                  >
-                    Profesionales
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/clientes"
-                    className={isActiveRoute("/clientes") ? styles.active : ""}
-                  >
-                    Clientes
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contacto"
-                    className={isActiveRoute("/contacto") ? styles.active : ""}
-                  >
-                    Contacto
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+                    <MenuItems
+                      isActiveRoute={isActiveRoute}
+                      toggleMobileMenu={toggleMobileMenu}
+                    />
+                  </div>
+                </>
+              ) : (
+                <MenuItems isActiveRoute={isActiveRoute} />
+              )}
+            </ul>
+          </nav>
         </div>
       </header>
 

@@ -46,7 +46,7 @@
   background-color: #001e6c;
 }
 
-.container {
+.navigation {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -55,7 +55,25 @@
   align-items: center;
 
   @media (max-width: 768px) {
-  padding: 0;
+    padding: 0;
+  }
+}
+
+.navigationMobile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #ffffff;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
   }
 }
 
@@ -83,10 +101,8 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 2rem;
 
   @media (max-width: 768px) {
-    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -98,18 +114,14 @@
 
 .navigation a {
   color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
+  margin: 1rem 0rem;
   border-radius: 0.25rem;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
   display: block;
 }
-
-/* .navigation a:focus {
-  outline: 2px solid #ffd700;
-  outline-offset: 2px;
-} */
 
 /* ==========================================
      YELLOW BOTTOM BAR ANIMATION
@@ -164,16 +176,86 @@
 }
 
 /* ==========================================
+     MOBILE MENU
+     ========================================== */
+
+.hamburgerMenu button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.hamburgerMenu button:hover {
+  color: #ffd700;
+}
+
+/* Mobile Menu Items Animation */
+.mobileMenuItems {
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: top;
+}
+
+.mobileMenuClosed {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-20px) scaleY(0);
+  visibility: hidden;
+}
+
+.mobileMenuOpen {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
+  visibility: visible;
+}
+
+/* Staggered animation for menu items */
+.mobileMenuOpen li {
+  animation: slideInFromLeft 0.4s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.mobileMenuOpen li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.mobileMenuOpen li:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.mobileMenuOpen li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.mobileMenuOpen li:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.mobileMenuOpen li:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==========================================
      RESPONSIVE DESIGN
      ========================================== */
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: 1rem;
-  }
-
-  .navigation ul {
     gap: 1rem;
   }
 
