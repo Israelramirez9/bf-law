@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Trans, useTranslation } from "react-i18next";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
@@ -76,58 +77,76 @@ export function Layout({ children }) {
   };
 
   return (
-    <div className={styles.layout}>
-      <header className={styles.header}>
-        <div className={styles.topNav}>
-          <div className={styles.logoSection}>
-            <a href="/">
-              <img src={logo} alt="BF Law Logo" width={200} />
-            </a>
+    <>
+      <Helmet>
+        <title>BF Law</title>
+
+        <meta property="og:title" content="BF Law" />
+
+        <meta
+          property="og:description"
+          content="BF Law es una empresa de abogados que ofrece servicios legales."
+        />
+
+        <meta property="og:image" content="/logo.png" />
+
+        <meta property="og:url" content="https://bflaw.com/" />
+
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div className={styles.layout}>
+        <header className={styles.header}>
+          <div className={styles.topNav}>
+            <div className={styles.logoSection}>
+              <a href="/">
+                <img src={logo} alt="BF Law Logo" width={200} />
+              </a>
+            </div>
+
+            <div className={styles.iconsSection}>
+              <LanguageSwitcher />
+            </div>
           </div>
 
-          <div className={styles.iconsSection}>
-            <LanguageSwitcher />
+          <div className={styles.menu}>
+            <nav
+              className={`${styles.navigation} ${
+                isMobile && styles.navigationMobile
+              }`}
+            >
+              <ul>
+                {isMobile ? (
+                  <>
+                    <li className={styles.hamburgerMenu}>
+                      <button onClick={toggleMobileMenu}>
+                        <GiHamburgerMenu /> Menu
+                      </button>
+                    </li>
+                    <div
+                      className={`${styles.mobileMenuItems} ${
+                        isMobileMenuOpen
+                          ? styles.mobileMenuOpen
+                          : styles.mobileMenuClosed
+                      }`}
+                    >
+                      <MenuItems
+                        isActiveRoute={isActiveRoute}
+                        toggleMobileMenu={toggleMobileMenu}
+                        t={t}
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <MenuItems isActiveRoute={isActiveRoute} t={t} />
+                )}
+              </ul>
+            </nav>
           </div>
-        </div>
+        </header>
 
-        <div className={styles.menu}>
-          <nav
-            className={`${styles.navigation} ${
-              isMobile && styles.navigationMobile
-            }`}
-          >
-            <ul>
-              {isMobile ? (
-                <>
-                  <li className={styles.hamburgerMenu}>
-                    <button onClick={toggleMobileMenu}>
-                      <GiHamburgerMenu /> Menu
-                    </button>
-                  </li>
-                  <div
-                    className={`${styles.mobileMenuItems} ${
-                      isMobileMenuOpen
-                        ? styles.mobileMenuOpen
-                        : styles.mobileMenuClosed
-                    }`}
-                  >
-                    <MenuItems
-                      isActiveRoute={isActiveRoute}
-                      toggleMobileMenu={toggleMobileMenu}
-                      t={t}
-                    />
-                  </div>
-                </>
-              ) : (
-                <MenuItems isActiveRoute={isActiveRoute} t={t} />
-              )}
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-      <main className={styles.main}>{children}</main>
-      <Footer />
-    </div>
+        <main className={styles.main}>{children}</main>
+        <Footer />
+      </div>
+    </>
   );
 }
