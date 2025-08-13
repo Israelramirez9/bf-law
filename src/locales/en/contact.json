@@ -1,0 +1,20 @@
+{
+  "title": "Contact",
+  "subtitle": "We are here to help you",
+  "form": {
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message"
+  },
+  "info": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Business hours"
+  },
+  "success": "Message sent successfully",
+  "error": "Error sending message"
+}

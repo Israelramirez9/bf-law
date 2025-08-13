@@ -1,0 +1,51 @@
+{
+  "title": "Sobre el estudio",
+  "description": "BF LAW es un estudio jurídico con un alcance internacional, especializado en decisiones legales claves, tenemos amplio conocimiento <span>en derecho corporativo y societario</span>.",
+  "description.p1": "Asesoramos a empresas, startups, instituciones y personas particulares que enfrentan desafíos en sus operaciones, estructuras legales o procesos de expansión. Nuestra práctica combina excelencia técnica, comprensión del negocio y compromiso con cada cliente. Ofrecemos soluciones legales diseñadas a medida, con una mirada práctica del derecho.",
+  "description.p2": "Contamos con amplia experiencia en constitución de sociedades, transacciones complejas, resolución de conflictos y asesoramiento integral.",
+  "subtitle": "Conoce nuestra historia y valores",
+  "mission": {
+    "title": "Nuestra Misión",
+    "description": "Brindar servicios legales de excelencia, con un enfoque personalizado y estratégico para cada cliente."
+  },
+  "vision": {
+    "title": "Nuestra Visión",
+    "description": "Ser el estudio jurídico de referencia en Argentina, reconocido por nuestra experiencia y compromiso."
+  },
+  "values": {
+    "title": "Nuestros Valores",
+    "description": "Nos guía <span>la cercanía con nuestros clientes</span>, la agilidad para actuar en entornos cambiantes y la capacidad de anticipar riesgos y detectar oportunidades.",
+    "p1": "Brindamos asesoramiento legal confiable y enfocado en resultados, acompañando a nuestros clientes en decisiones clave con comprensión del negocio y una mirada cercana. Nos impulsa la excelencia profesional, la confianza construida y la capacidad de ofrecer soluciones adaptadas a contextos cambiantes y complejos."
+  },
+  "practice": {
+    "title": "Áreas de práctica",
+    "description": "Nos especializamos en la siguientes áreas:",
+    "p1": "Nos especializamos en la siguientes áreas:",
+    "cards": {
+      "1": {
+        "title": "Derecho Corporativo y Societario",
+        "description": "Asesoramiento integral en constitución de sociedades, transacciones complejas, resolución de conflictos y asesoramiento integral."
+      },
+      "2": {
+        "title": "Contratos y Negociación",
+        "description": "Redacción, revisión y estructuración de contratos comerciales, con foco en prevenir conflictos."
+      },
+      "3": {
+        "title": "Conflictos Legales y Arbitraje",
+        "description": "Intervención estratégica en disputas comerciales y societarias, judiciales o arbitrales."
+      },
+      "4": {
+        "title": "Inversiones y Startups",
+        "description": "Asesoramiento a emprendedores e inversores en etapas iniciales, rondas de inversión y acuerdos SAFE."
+      },
+      "5": {
+        "title": "Propiedad Intelectual y Nuevas Tecnologías",
+        "description": "Registro de marcas, licencias, compliance digital y contratos tecnológicos."
+      },
+      "6": {
+        "title": "Planificación Patrimonial y Familiar",
+        "description": "Asesoramos en la planificación patrimonial y en la creación de acuerdos familiares para preservar empresas y activos, optimizando su sucesión y carga impositiva."
+      }
+    }
+  }
+}

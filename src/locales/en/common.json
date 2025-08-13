@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "professionals": "Professionals",
+    "contact": "Contact",
+    "clients": "Clients"
+  },
+  "buttons": {
+    "contact": "Contact",
+    "more_info": "More information",
+    "send": "Send",
+    "back": "Back"
+  },
+  "languages": {
+    "spanish": "Español",
+    "english": "English"
+  }
+}

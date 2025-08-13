@@ -1,0 +1,28 @@
+{
+  "contact": {
+    "title": "Contáctanos",
+    "phone": "Número de contacto",
+    "phoneValue": "+0(850) 544 7514",
+    "address": "Ubicados",
+    "addressValue": "Edificio Paralelo 50 Norte\nAv. 12 de Octubre 7225, piso 3 of 322\n(1629) Pilar. Provincia de Buenos Aires",
+    "addressLink": "Abrir en Google Maps",
+    "email": "Email de contacto",
+    "emailValue": "info@bflaw.com.ar"
+  },
+  "navigation": {
+    "title": "Navegación",
+    "links": {
+      "about": "Quienes somos",
+      "practice": "Áreas de práctica",
+      "approach": "Nuestro enfoque",
+      "clients": "Clientes",
+      "professionals": "Profesionales"
+    }
+  },
+  "copyright": "©{{year}} | Bf Law | Todos los derechos reservados",
+  "opportunities": {
+    "title": "Oportunidades",
+    "description": "Si compartes nuestra pasión por el derecho y los negocios, envíanos tu CV para futuras búsquedas.",
+    "button": "Cargar CV"
+  }
+}

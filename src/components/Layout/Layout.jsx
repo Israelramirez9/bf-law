@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { Footer } from "../Footer";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 import styles from "./Layout.module.css";
 
-function MenuItems({ isActiveRoute, toggleMobileMenu }) {
+function MenuItems({ isActiveRoute, toggleMobileMenu, t }) {
   return (
     <>
       <li>
@@ -14,7 +16,7 @@ function MenuItems({ isActiveRoute, toggleMobileMenu }) {
           className={isActiveRoute("/") ? styles.active : ""}
           onClick={toggleMobileMenu}
         >
-          Inicio
+          <Trans i18nKey="navigation.home" />
         </Link>
       </li>
       <li>
@@ -23,7 +25,7 @@ function MenuItems({ isActiveRoute, toggleMobileMenu }) {
           className={isActiveRoute("/estudio") ? styles.active : ""}
           onClick={toggleMobileMenu}
         >
-          Estudio
+          {t("navigation.about")}
         </Link>
       </li>
       <li>
@@ -32,16 +34,7 @@ function MenuItems({ isActiveRoute, toggleMobileMenu }) {
           className={isActiveRoute("/profesionales") ? styles.active : ""}
           onClick={toggleMobileMenu}
         >
-          Profesionales
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/clientes"
-          className={isActiveRoute("/clientes") ? styles.active : ""}
-          onClick={toggleMobileMenu}
-        >
-          Clientes
+          {t("navigation.professionals")}
         </Link>
       </li>
       <li>
@@ -50,7 +43,7 @@ function MenuItems({ isActiveRoute, toggleMobileMenu }) {
           className={isActiveRoute("/contacto") ? styles.active : ""}
           onClick={toggleMobileMenu}
         >
-          Contacto
+          {t("navigation.contact")}
         </Link>
       </li>
     </>
@@ -58,6 +51,7 @@ function MenuItems({ isActiveRoute, toggleMobileMenu }) {
 }
 export function Layout({ children }) {
   const { pathname } = useLocation();
+  const { t } = useTranslation("common");
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -68,11 +62,7 @@ export function Layout({ children }) {
       behavior: "smooth",
     });
 
-    if (window.innerWidth > 768) {
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-    }
+    setIsMobile(window.innerWidth < 768);
   }, [pathname]);
 
   const toggleMobileMenu = () => {
@@ -96,7 +86,7 @@ export function Layout({ children }) {
           </div>
 
           <div className={styles.iconsSection}>
-            <span></span>
+            <LanguageSwitcher />
           </div>
         </div>
 
@@ -124,11 +114,12 @@ export function Layout({ children }) {
                     <MenuItems
                       isActiveRoute={isActiveRoute}
                       toggleMobileMenu={toggleMobileMenu}
+                      t={t}
                     />
                   </div>
                 </>
               ) : (
-                <MenuItems isActiveRoute={isActiveRoute} />
+                <MenuItems isActiveRoute={isActiveRoute} t={t} />
               )}
             </ul>
           </nav>

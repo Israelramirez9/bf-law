@@ -1,0 +1,20 @@
+{
+  "title": "Contacto",
+  "subtitle": "Estamos aquí para ayudarte",
+  "form": {
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar mensaje"
+  },
+  "info": {
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Email",
+    "hours": "Horarios de atención"
+  },
+  "success": "Mensaje enviado exitosamente",
+  "error": "Error al enviar el mensaje"
+}

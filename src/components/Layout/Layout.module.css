@@ -18,7 +18,7 @@
 
 .topNav {
   display: flex;
-  padding-top: 1rem;
+  margin-top: 1rem;
 }
 
 .logoSection {
@@ -38,6 +38,12 @@
   justify-content: center;
   align-items: center;
   color: #333;
+  margin-left: 1rem;
+  margin-right: 3rem;
+
+  @media (max-width: 768px) {
+    margin-right: 1rem;
+  }
 }
 
 .menu {

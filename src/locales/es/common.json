@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Estudio",
+    "professionals": "Profesionales",
+    "contact": "Contacto",
+    "clients": "Clientes"
+  },
+  "buttons": {
+    "contact": "Contáctenos",
+    "more_info": "Más información",
+    "send": "Enviar",
+    "back": "Volver"
+  },
+  "languages": {
+    "spanish": "Español",
+    "english": "English"
+  }
+}

@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
-import { About, Clients, Contact, Home, Professionals } from "./pages";
+import { About, Contact, Home, Professionals } from "./pages";
 import { Providers } from "./providers";
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
           <Route path="/estudio" element={<About />} />
           <Route path="/profesionales" element={<Professionals />} />
           <Route path="/contacto" element={<Contact />} />
-          <Route path="/clientes" element={<Clients />} />
         </Routes>
       </Layout>
     </Providers>

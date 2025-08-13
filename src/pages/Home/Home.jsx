@@ -1,3 +1,4 @@
+import { Trans, useTranslation } from "react-i18next";
 import { FaMedal, FaVideo } from "react-icons/fa";
 import { ImCalendar } from "react-icons/im";
 import { TbTargetArrow } from "react-icons/tb";
@@ -16,6 +17,9 @@ import { Banner } from "./sections";
 
 export function Home() {
   const navigate = useNavigate();
+  const { ready } = useTranslation(["home", "common"]);
+
+  if (!ready) return <div>Loading...</div>;
 
   return (
     <>
@@ -23,20 +27,31 @@ export function Home() {
         image={{
           src: BannerImage,
           alt: "BF Law",
-          style: { objectPosition: "inherit" },
+          style: { objectPosition: "top" },
+        }}
+        content={{
+          style: {
+            bottom: "10%",
+            right: "5%",
+            top: "auto",
+            left: "auto",
+            transform: "none",
+          },
         }}
       >
         <h2>
-          Impulsamos negocios, Protegemos{" "}
-          <span className="highlight">&nbsp;decisiones</span>.
+          <Trans
+            i18nKey="home:banner.title"
+            components={{
+              span: <span className="highlight" />,
+            }}
+          />
         </h2>
         <p>
-          Ofrecemos asesoría legal estratégica con foco en resultados
-          comerciales.
-          <br />
-          <br />
-          Asistimos a empresas, startups, inversores y familias en cada paso
-          clave de su camino.
+          <Trans
+            i18nKey="home:banner.description"
+            components={{ br: <br /> }}
+          />
         </p>
       </Banner>
 
@@ -46,18 +61,24 @@ export function Home() {
             {/* Contenido Principal */}
             <div className={styles.content}>
               <div className={styles.textSection}>
-                <h2 className={styles.subtitle}>QUIENES SOMOS</h2>
+                <h2 className={styles.subtitle}>
+                  <Trans i18nKey="home:team.title" />
+                </h2>
 
                 <h1 className={styles.title}>
-                  BF LAW es un e
-                  <span className="highlight">studio jurídico co</span>n una
-                  visión global y enfoque estratégico.
+                  <Trans
+                    i18nKey="home:team.subtitle"
+                    components={{
+                      span: <span className="highlight" />,
+                    }}
+                  />
                 </h1>
 
                 <p className={styles.description}>
-                  Representamos a empresas, instituciones y startups en
-                  decisiones legales clave, con excelencia técnica y comprensión
-                  del negocio.
+                  <Trans
+                    i18nKey="home:team.description"
+                    components={{ br: <br /> }}
+                  />
                 </p>
               </div>
 
@@ -65,7 +86,9 @@ export function Home() {
                 className="primaryButton"
                 onClick={() => navigate("/contacto")}
               >
-                <span>Contáctenos</span>
+                <span>
+                  <Trans i18nKey="common:buttons.contact" />
+                </span>
                 <span className="arrow">›</span>
               </button>
             </div>
@@ -78,7 +101,7 @@ export function Home() {
                 </div>
                 <div>
                   <h3 className={styles.featureTitle}>
-                    +30 años de experiencia
+                    <Trans i18nKey="home:team.feature1" />
                   </h3>
                 </div>
               </div>
@@ -89,7 +112,7 @@ export function Home() {
                 </div>
                 <div>
                   <h3 className={styles.featureTitle}>
-                    Operaciones nacionales e internacionales
+                    <Trans i18nKey="home:team.feature2" />
                   </h3>
                 </div>
               </div>
@@ -100,7 +123,7 @@ export function Home() {
                 </div>
                 <div>
                   <h3 className={styles.featureTitle}>
-                    Enfoque personalizado y ágil
+                    <Trans i18nKey="home:team.feature3" />
                   </h3>
                 </div>
               </div>
@@ -111,7 +134,7 @@ export function Home() {
                 </div>
                 <div>
                   <h3 className={styles.featureTitle}>
-                    Respaldados por la confianza de quienes nos eligen
+                    <Trans i18nKey="home:team.feature4" />
                   </h3>
                 </div>
               </div>
@@ -125,21 +148,24 @@ export function Home() {
           <div className={styles.section2Top}>
             <div className={styles.container2}>
               <div className={styles.header2}>
-                <p className={styles.subtitle}>COMO LO HACEMOS</p>
+                <p className={styles.subtitle}>
+                  <Trans i18nKey="home:section2.subtitle" />
+                </p>
 
                 <h2 className={styles.title2}>
-                  Brindamos{" "}
-                  <span className="highlight">soluciones legales</span>,
-                  diseñadas a medida para cada desafío empresarial.
+                  <Trans
+                    i18nKey="home:section2.title"
+                    components={{
+                      span: <span className="highlight" />,
+                    }}
+                  />
                 </h2>
 
                 <p className={styles.description2}>
-                  En BF Law, siempre hay una manera. Nuestro equipo se involucra
-                  desde el inicio, comprendiendo la industria, la cultura y los
-                  objetivos de cada cliente. Combinamos análisis jurídico
-                  riguroso con una mirada práctica del negocio. Esto nos permite
-                  anticipar riesgos, identificar oportunidades y acompañar
-                  procesos clave con precisión.
+                  <Trans
+                    i18nKey="home:section2.description"
+                    components={{ br: <br /> }}
+                  />
                 </p>
               </div>
             </div>
@@ -147,9 +173,10 @@ export function Home() {
             <div className={styles.videoSection}>
               <div className={styles.playButton}>
                 <FaVideo className={styles.playIcon} />
-                <span className={styles.videoText}>Conoce nuestro estudio</span>
+                <span className={styles.videoText}>
+                  <Trans i18nKey="home:section2.videoText" />
+                </span>
               </div>
-              <span className={styles.videoMeta}>2:34Min, 14.7MB </span>
             </div>
           </div>
           <div className={styles.section2Bottom}>
@@ -161,7 +188,9 @@ export function Home() {
                     <div className={styles.iconContainer}>
                       <IconComponent className={styles.icon} />
                     </div>
-                    <p className={styles.serviceTitle}>{service.title}</p>
+                    <p className={styles.serviceTitle}>
+                      <Trans i18nKey={service.title} />
+                    </p>
                   </div>
                 );
               })}
@@ -171,15 +200,23 @@ export function Home() {
       </section>
 
       <section className={styles.section3}>
-        <p className={styles.subtitle}>NUESTRO ENFOQUE</p>
+        <p className={styles.subtitle}>
+          <Trans i18nKey="home:section3.subtitle" />
+        </p>
         <h2 className={styles.title2}>
-          Transformamos necesidades en soluciones <br />
-          <span className="highlight">legales efectivas</span>.
+          <Trans
+            i18nKey="home:section3.title"
+            components={{
+              span: <span className="highlight" />,
+            }}
+          />
         </h2>
 
         <p className={styles.description3}>
-          Cada etapa del proceso legal está pensada para maximizar resultados y
-          anticipar riesgos, con una mirada práctica del negocio.
+          <Trans
+            i18nKey="home:section3.description"
+            components={{ br: <br /> }}
+          />
         </p>
 
         <div className={styles.cardsWrapper}>
@@ -198,15 +235,22 @@ export function Home() {
 
       <section className={styles.section4}>
         <div className={styles.wrapperSection4}>
-          <p className={styles.subtitle}>CONFÍA EN NOSOTROS</p>
+          <p className={styles.subtitle}>
+            <Trans i18nKey="home:section4.subtitle" />
+          </p>
           <h2 className={styles.title2}>
-            Nos eligen <span className="highlight">clientes</span> que reconocen{" "}
-            <br />
-            nuestro esfuerzo y dedicación en cada caso
+            <Trans
+              i18nKey="home:section4.title"
+              components={{
+                span: <span className="highlight" />,
+              }}
+            />
           </h2>
           <p className={styles.description3}>
-            Algunos de ellos con los que hemos trabajado:
-            <br />
+            <Trans
+              i18nKey="home:section4.description"
+              components={{ br: <br /> }}
+            />
           </p>
 
           <div className={styles.logosWrapper}>
@@ -222,7 +266,9 @@ export function Home() {
               className="primaryButton"
               onClick={() => navigate("/clientes")}
             >
-              <span>Ver más </span>
+              <span>
+                <Trans i18nKey="home:section4.button" />
+              </span>
               <span className="arrow">›</span>
             </button>
           </div>

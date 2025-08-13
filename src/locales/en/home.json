@@ -1,0 +1,63 @@
+{
+  "banner": {
+    "title": "We drive businesses, Protect <span>decisions</span>.",
+    "description": "We offer strategic legal advice with a focus on commercial results.<br/><br/> We assist companies, startups, investors, and families at every key step of their journey."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Specialized practice areas"
+  },
+  "team": {
+    "title": "Who We Are",
+    "subtitle": "BF Law is a <span>law firm</span> with a global vision and strategic approach.",
+    "description": "We represent companies, institutions, and startups in key legal decisions, with technical excellence and business understanding.",
+    "feature1": "+30 years of experience",
+    "feature2": "National and international operations",
+    "feature3": "Personalized and agile approach",
+    "feature4": "Backed by the trust of those who choose us"
+  },
+  "section2": {
+    "title": "We provide <span>legal solutions</span>, tailored to each business challenge.",
+    "subtitle": "HOW WE DO IT",
+    "description": "At BF Law, there is always a way. Our team gets involved from the start, understanding the industry, culture, and objectives of each client. We combine rigorous legal analysis with a practical business perspective. This allows us to anticipate risks, identify opportunities, and support key processes with precision.",
+    "service1": {
+      "title": "Personalized Advice"
+    },
+    "service2": {
+      "title": "Agility and Efficiency"
+    },
+    "service3": {
+      "title": "Comprehensive Legal Commitment"
+    },
+    "service4": {
+      "title": "Guaranteed Confidentiality"
+    },
+    "service5": {
+      "title": "Tailored Solutions"
+    },
+    "videoText": "Get to know our firm"
+  },
+  "section3": {
+    "title": "We turn needs into <span>effective legal solutions</span>.",
+    "subtitle": "OUR APPROACH",
+    "description": "Each stage of the legal process is designed to maximize results and anticipate risks, with a practical business perspective.",
+    "card1": {
+      "title": "We Support Key Decisions",
+      "description": "We work with commitment, proximity, and strategy to provide relevant legal solutions."
+    },
+    "card2": {
+      "title": "Closeness and Personalized Diagnosis",
+      "description": "We listen to the client’s needs, understand their industry, and define objectives together."
+    },
+    "card3": {
+      "title": "We Add Value",
+      "description": "We translate complexity into understandable strategies. Our clients make informed decisions, fully aware of risks and opportunities."
+    }
+  },
+  "section4": {
+    "title": "We are chosen by <span>clients</span> who recognize <br /> our effort and dedication in every case",
+    "subtitle": "TRUST US",
+    "description": "Some of those we have worked with:",
+    "button": "See more"
+  }
+}

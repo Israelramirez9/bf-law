@@ -1,0 +1,63 @@
+{
+  "banner": {
+    "title": "Impulsamos negocios, Protegemos <span>decisiones</span>.",
+    "description": "Ofrecemos asesoría legal estratégica con foco en resultados comerciales.<br/><br/> Asistimos a empresas, startups, inversores y familias en cada paso clave de su camino."
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Áreas de práctica especializadas"
+  },
+  "team": {
+    "title": "Quienes Somos",
+    "subtitle": "BF Law es un <span>estudio jurídico</span> con una visión global y enfoque estratégico.",
+    "description": "Representamos a empresas, instituciones y startups en decisiones legales clave, con excelencia técnica y comprensión del negocio.",
+    "feature1": "+30 años de experiencia",
+    "feature2": "Operaciones nacionales e internacionales",
+    "feature3": "Enfoque personalizado y ágil",
+    "feature4": "Respaldados por la confianza de quienes nos eligen"
+  },
+  "section2": {
+    "title": "Brindamos <span>soluciones legales</span>, diseñadas a medida para cada desafío empresarial.",
+    "subtitle": "COMO LO HACEMOS",
+    "description": "En BF Law, siempre hay una manera. Nuestro equipo se involucra desde el inicio, comprendiendo la industria, la cultura y los objetivos de cada cliente. Combinamos análisis jurídico riguroso con una mirada práctica del negocio. Esto nos permite anticipar riesgos, identificar oportunidades y acompañar procesos clave con precisión.",
+    "service1": {
+      "title": "Asesoría Personalizada"
+    },
+    "service2": {
+      "title": "Agilidad y Eficiencia"
+    },
+    "service3": {
+      "title": "Compromiso legal integral"
+    },
+    "service4": {
+      "title": "Confidencialidad garantizada"
+    },
+    "service5": {
+      "title": "Soluciones a medida"
+    },
+    "videoText": "Conoce nuestro estudio"
+  },
+  "section3": {
+    "title": "Transformamos necesidades en <span>soluciones legales efectivas</span>.",
+    "subtitle": "NUESTRO ENFOQUE",
+    "description": "Cada etapa del proceso legal está pensada para maximizar resultados y anticipar riesgos, con una mirada práctica del negocio.",
+    "card1": {
+      "title": "Acompañamos decisiones clave",
+      "description": "Trabajamos con compromiso, cercanía y estrategia para aportar soluciones jurídicas relevantes."
+    },
+    "card2": {
+      "title": "Cercanía y diagnóstico personalizado",
+      "description": "Escuchamos las necesidades del cliente, entendemos su industria y definimos juntos los objetivos."
+    },
+    "card3": {
+      "title": "Agregamos valor",
+      "description": "Traducimos lo complejo en estrategias comprensibles. Nuestros clientes toman decisiones informadas, con plena conciencia de riesgos y oportunidades."
+    }
+  },
+  "section4": {
+    "title": "Nos eligen <span>clientes</span> que reconocen <br /> nuestro esfuerzo y dedicación en cada caso",
+    "subtitle": "CONFÍA EN NOSOTROS",
+    "description": "Algunos de ellos con los que hemos trabajado:",
+    "button": "Ver más"
+  }
+}

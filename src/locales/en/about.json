@@ -1,0 +1,51 @@
+{
+  "title": "About the Firm",
+  "description": "BF LAW is a law firm with an international reach, specialized in key legal decisions, with extensive knowledge <span>in corporate and business law</span>.",
+  "description.p1": "We advise companies, startups, institutions, and individuals facing challenges in their operations, legal structures, or expansion processes. Our practice combines technical excellence, business understanding, and commitment to each client. We offer tailored legal solutions with a practical approach to the law.",
+  "description.p2": "We have extensive experience in company incorporation, complex transactions, dispute resolution, and comprehensive legal advice.",
+  "subtitle": "Learn about our history and values",
+  "mission": {
+    "title": "Our Mission",
+    "description": "To provide excellent legal services with a personalized and strategic approach for each client."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "To be the leading law firm in Argentina, recognized for our expertise and commitment."
+  },
+  "values": {
+    "title": "Our Values",
+    "description": "We are guided by <span>closeness to our clients</span>, agility to act in changing environments, and the ability to anticipate risks and identify opportunities.",
+    "p1": "We provide reliable, results-focused legal advice, supporting our clients in key decisions with business understanding and a close approach. We are driven by professional excellence, built trust, and the ability to offer solutions adapted to changing and complex contexts."
+  },
+  "practice": {
+    "title": "Practice Areas",
+    "description": "We specialize in the following areas:",
+    "p1": "We specialize in the following areas:",
+    "cards": {
+      "1": {
+        "title": "Corporate and Business Law",
+        "description": "Comprehensive advice on company incorporation, complex transactions, dispute resolution, and overall legal support."
+      },
+      "2": {
+        "title": "Contracts and Negotiation",
+        "description": "Drafting, reviewing, and structuring commercial contracts with a focus on conflict prevention."
+      },
+      "3": {
+        "title": "Legal Disputes and Arbitration",
+        "description": "Strategic intervention in commercial and corporate disputes, whether judicial or arbitral."
+      },
+      "4": {
+        "title": "Investments and Startups",
+        "description": "Advising entrepreneurs and investors in early stages, investment rounds, and SAFE agreements."
+      },
+      "5": {
+        "title": "Intellectual Property and New Technologies",
+        "description": "Trademark registration, licensing, digital compliance, and technology contracts."
+      },
+      "6": {
+        "title": "Estate and Family Planning",
+        "description": "We advise on estate planning and the creation of family agreements to preserve businesses and assets, optimizing succession and tax burden."
+      }
+    }
+  }
+}
