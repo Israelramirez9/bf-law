@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 350px;
+  padding: 1rem;
+  text-align: justify;
+
+  img {
+    max-width: 300px;
+  }
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #020e4a;
+  margin: 1rem 0 1rem 0;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.subtitle2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #020e4a;
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: gray;
+  margin-bottom: 0;
+}

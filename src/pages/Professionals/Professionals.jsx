@@ -1,7 +1,9 @@
 import { Trans, useTranslation } from "react-i18next";
 import ProfessionalsBanner from "../../assets/professionals_background.png";
+import { CardV1 } from "../../components/CardV1";
 import { Banner } from "../Home/sections";
-import styles from "./Proffesionals.module.css";
+import styles from "./Professionals.module.css";
+import { professionals } from "./constants";
 
 export function Professionals() {
   const { ready } = useTranslation(["professionals"]);
@@ -31,7 +33,14 @@ export function Professionals() {
         </h2>
       </Banner>
       <div className={styles.section}>
-        <h1>Profesionales</h1>
+        <h1>
+          <Trans i18nKey="professionals:subtitle" />
+        </h1>
+        <div className={styles.professionalsContainer}>
+          {professionals.map((professional) => (
+            <CardV1 key={professional.title} {...professional} />
+          ))}
+        </div>
       </div>
     </>
   );

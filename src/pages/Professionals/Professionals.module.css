@@ -10,7 +10,15 @@
 .section {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 2rem;
+}
+
+.professionalsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
