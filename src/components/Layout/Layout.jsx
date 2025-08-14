@@ -4,6 +4,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { useWindowDimension } from "../../hooks/useWindowDimension";
 import { Footer } from "../Footer";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import styles from "./Layout.module.css";
@@ -50,10 +51,11 @@ function MenuItems({ isActiveRoute, toggleMobileMenu, t }) {
     </>
   );
 }
+
 export function Layout({ children }) {
   const { pathname } = useLocation();
   const { t } = useTranslation("common");
-  const [isMobile, setIsMobile] = useState(false);
+  const { isMobile } = useWindowDimension();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -62,8 +64,6 @@ export function Layout({ children }) {
       left: 0,
       behavior: "smooth",
     });
-
-    setIsMobile(window.innerWidth < 768);
   }, [pathname]);
 
   const toggleMobileMenu = () => {

@@ -12,15 +12,8 @@ const Link = ({ to, children, className }) => (
 );
 
 export const Footer = () => {
-  // Asegurar que el namespace footer esté cargado
-  const { ready, t } = useTranslation(["footer", "common"]);
-  // Forzar re-renderización cuando cambie el idioma
+  const { ready } = useTranslation(["footer", "common"]);
   const currentLanguage = useLanguageChange();
-
-  // Debug: verificar si las traducciones están cargadas
-  console.log("Footer ready:", ready);
-  console.log("Current language:", currentLanguage);
-  console.log("Footer contact title:", t("contact.title"));
 
   if (!ready) return <div>Loading...</div>;
 

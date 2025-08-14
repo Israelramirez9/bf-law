@@ -20,6 +20,7 @@ export function Professionals() {
             top: "60%",
             transform: "translate(-50%, -10%)",
             maxWidth: "700px",
+            width: "100%",
           },
         }}
       >
