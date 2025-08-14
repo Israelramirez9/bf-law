@@ -1,54 +1,76 @@
+import { Trans, useTranslation } from "react-i18next";
 import styles from "./Contact.module.css";
 import { Form } from "./Form";
 
 export function Contact() {
+  const { ready } = useTranslation(["contact"]);
+
+  if (!ready) return null;
+
   return (
     <div className={styles.container}>
-      <h1>Contacto</h1>
+      <h1>
+        <Trans i18nKey="contact:title" />
+      </h1>
       <p>
-        ¿Necesitas asesoría legal? No dudes en contactarnos. Estamos aquí para
-        ayudarte con todas tus necesidades legales.
+        <Trans i18nKey="contact:subtitle" />
       </p>
 
       <div>
         <div className={styles.contactInfo}>
           {/* Información de contacto */}
           <div className={styles.contactInfo1}>
-            <h2>Información de Contacto</h2>
+            <h2>
+              <Trans i18nKey="contact:info.title" />
+            </h2>
             <div style={{ marginTop: "1rem" }}>
               <p>
-                <strong>Dirección:</strong>
+                <strong>
+                  <Trans i18nKey="contact:info.address" />
+                </strong>
               </p>
               <p>
-                Av. Principal #123
+                <Trans i18nKey="contact:info.addressValue" />
                 <br />
-                Ciudad, País
+                <Trans i18nKey="contact:info.addressValue2" />
               </p>
 
               <p style={{ marginTop: "1rem" }}>
-                <strong>Teléfono:</strong>
-              </p>
-              <p>+1 (555) 123-4567</p>
-
-              <p style={{ marginTop: "1rem" }}>
-                <strong>Email:</strong>
-              </p>
-              <p>info@bflaw.com</p>
-
-              <p style={{ marginTop: "1rem" }}>
-                <strong>Horarios:</strong>
+                <strong>
+                  <Trans i18nKey="contact:info.phone" />
+                </strong>
               </p>
               <p>
-                Lunes - Viernes: 9:00 AM - 6:00 PM
+                <Trans i18nKey="contact:info.phoneValue" />
+              </p>
+
+              <p style={{ marginTop: "1rem" }}>
+                <strong>
+                  <Trans i18nKey="contact:info.email" />
+                </strong>
+              </p>
+              <p>
+                <Trans i18nKey="contact:info.emailValue" />
+              </p>
+
+              <p style={{ marginTop: "1rem" }}>
+                <strong>
+                  <Trans i18nKey="contact:info.hours" />
+                </strong>
+              </p>
+              <p>
+                <Trans i18nKey="contact:info.hoursValue" />
                 <br />
-                Sábados: 9:00 AM - 2:00 PM
+                <Trans i18nKey="contact:info.hoursValue2" />
               </p>
             </div>
           </div>
 
           {/* Formulario */}
           <div className={styles.contactInfo2}>
-            <h2>Envíanos un Mensaje</h2>
+            <h2>
+              <Trans i18nKey="contact:form.title" />
+            </h2>
             <Form />
           </div>
         </div>

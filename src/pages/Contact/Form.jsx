@@ -1,6 +1,7 @@
 import { send } from "@emailjs/browser";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 export const Form = () => {
   const {
@@ -9,6 +10,8 @@ export const Form = () => {
     reset,
     formState: { errors },
   } = useForm();
+
+  const { t } = useTranslation(["contact"]);
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -35,12 +38,12 @@ export const Form = () => {
         <div style={{ marginBottom: "1rem" }}>
           <input
             type="text"
-            placeholder="Tu nombre"
+            placeholder={t("contact:form.name")}
             {...register("name", {
-              required: "El nombre es obligatorio",
+              required: t("contact:form.name.required"),
               minLength: {
                 value: 3,
-                message: "El nombre debe tener al menos 3 caracteres",
+                message: t("contact:form.name.minLength"),
               },
             })}
             style={{
@@ -61,12 +64,12 @@ export const Form = () => {
         <div style={{ marginBottom: "1rem" }}>
           <input
             type="email"
-            placeholder="Tu email"
+            placeholder={t("contact:form.email")}
             {...register("email", {
-              required: "El email es obligatorio",
+              required: t("contact:form.email.required"),
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                message: "Ingresa un email válido",
+                message: t("contact:form.email.pattern"),
               },
             })}
             style={{
@@ -87,12 +90,12 @@ export const Form = () => {
         <div style={{ marginBottom: "1rem" }}>
           <input
             type="text"
-            placeholder="Asunto"
+            placeholder={t("contact:form.subject")}
             {...register("title", {
-              required: "El asunto es obligatorio",
+              required: t("contact:form.title.required"),
               minLength: {
                 value: 5,
-                message: "El asunto debe tener al menos 5 caracteres",
+                message: t("contact:form.title.minLength"),
               },
             })}
             style={{
@@ -113,13 +116,13 @@ export const Form = () => {
         <div style={{ marginBottom: "1rem" }}>
           <textarea
             name="message"
-            placeholder="Tu mensaje"
+            placeholder={t("contact:form.message")}
             rows={5}
             {...register("message", {
-              required: "El mensaje es obligatorio",
+              required: t("contact:form.message.required"),
               minLength: {
                 value: 10,
-                message: "El mensaje debe tener al menos 10 caracteres",
+                message: t("contact:form.message.minLength"),
               },
             })}
             style={{
@@ -151,7 +154,7 @@ export const Form = () => {
             fontWeight: "bold",
           }}
         >
-          {isLoading ? "Enviando..." : "Enviar Mensaje"}
+          {isLoading ? t("contact:form.loading") : t("contact:form.send")}
         </button>
       </form>
     </>

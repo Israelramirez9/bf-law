@@ -22,7 +22,6 @@
   "copyright": "©{{year}} | Bf Law | Todos los derechos reservados",
   "opportunities": {
     "title": "Oportunidades",
-    "description": "Si compartes nuestra pasión por el derecho y los negocios, envíanos tu CV para futuras búsquedas.",
-    "button": "Cargar CV"
+    "description": "Si compartes nuestra pasión por el derecho y los negocios, envíanos tu CV para futuras búsquedas a <a href='mailto:info@bflaw.com.ar'>info@bflaw.com.ar</a>"
   }
 }

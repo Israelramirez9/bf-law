@@ -260,18 +260,6 @@ export function Home() {
             <img src={Baggio} alt="logo4" />
             <img src={Directv} alt="logo5" />
           </div>
-
-          <div className={styles.clientsButtonWrapper}>
-            <button
-              className="primaryButton"
-              onClick={() => navigate("/clientes")}
-            >
-              <span>
-                <Trans i18nKey="home:section4.button" />
-              </span>
-              <span className="arrow">›</span>
-            </button>
-          </div>
         </div>
       </section>
     </>

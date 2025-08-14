@@ -115,14 +115,13 @@ export const Footer = () => {
               <Trans i18nKey="footer:opportunities.title" />
             </h3>
             <p className={styles.opportunitiesText}>
-              <Trans i18nKey="footer:opportunities.description" />
+              <Trans
+                i18nKey="footer:opportunities.description"
+                components={{
+                  a: <a href="mailto:info@bflaw.com.ar" />,
+                }}
+              />
             </p>
-            <button className={"primaryButton"}>
-              <span>
-                <Trans i18nKey="footer:opportunities.button" />
-              </span>
-              <span className="arrow">›</span>
-            </button>
           </div>
         </div>
       </div>
