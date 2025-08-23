@@ -168,55 +168,6 @@
   margin-bottom: 2rem;
 }
 
-.videoSection {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  color: #374151;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-}
-
-.playButton {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid #e5e7eb;
-  cursor: pointer;
-  transition: box-shadow 0.2s ease;
-}
-
-.playButton:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.playIcon {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #4b5563;
-}
-
-.videoText {
-  font-size: 0.875rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.videoMeta {
-  font-size: 0.875rem;
-  color: #6b7280;
-  text-align: center;
-}
-
 .servicesFlex {
   display: flex;
   flex-wrap: wrap;
@@ -265,16 +216,6 @@
 
   .title2 {
     font-size: 1.875rem;
-  }
-
-  .videoSection {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .videoMeta {
-    max-width: 300px;
-    margin: 0 auto;
   }
 
   .servicesFlex {
@@ -326,17 +267,31 @@
   gap: 1rem;
 }
 
-.logosWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+.logosCarousel {
+  padding: 2rem 0;
 }
 
-.logosWrapper img {
-  max-width: 200px;
+.logoImage {
+  max-width: 150px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+/* Swiper pagination customization */
+.logosCarousel :global(.swiper-pagination) {
+  bottom: 0 !important;
+}
+
+.logosCarousel :global(.swiper-pagination-bullet) {
+  background-color: #020e4a;
+  opacity: 0.3;
+}
+
+.logosCarousel :global(.swiper-pagination-bullet-active) {
+  opacity: 1;
 }
 
 .clientsButtonWrapper {

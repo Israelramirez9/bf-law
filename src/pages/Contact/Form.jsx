@@ -2,6 +2,7 @@ import { send } from "@emailjs/browser";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import styles from "./Contact.module.css";
 
 export const Form = () => {
   const {
@@ -141,19 +142,7 @@ export const Form = () => {
           )}
         </div>
 
-        <button
-          type="submit"
-          style={{
-            backgroundColor: "#61dafb",
-            color: "#1a1a1a",
-            padding: "0.8rem 2rem",
-            border: "none",
-            borderRadius: "4px",
-            fontSize: "1rem",
-            cursor: "pointer",
-            fontWeight: "bold",
-          }}
-        >
+        <button type="submit" className={styles.buttonSubmit}>
           {isLoading ? t("contact:form.loading") : t("contact:form.send")}
         </button>
       </form>

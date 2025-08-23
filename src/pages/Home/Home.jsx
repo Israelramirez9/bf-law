@@ -1,19 +1,54 @@
 import { Trans, useTranslation } from "react-i18next";
-import { FaMedal, FaVideo } from "react-icons/fa";
+import { FaMedal } from "react-icons/fa";
 import { ImCalendar } from "react-icons/im";
 import { TbTargetArrow } from "react-icons/tb";
 import { TfiWorld } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
-import Baggio from "../../assets/baggio.png";
-import Directv from "../../assets/directv.png";
-import Hsbc from "../../assets/hsbc.png";
-import LaHolando from "../../assets/la_holando.png";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import BannerImage from "../../assets/main_banner.png";
-import Walmart from "../../assets/walmart.png";
 import { Card } from "../../components/Card";
 import { services, servicesImages } from "./constants";
 import styles from "./Home.module.css";
 import { Banner } from "./sections";
+
+// Import logos
+import AngelEstrada from "../../assets/logos/angel_estrada.png";
+import Cabelma from "../../assets/logos/cabelma.png";
+import Caf from "../../assets/logos/caf.png";
+import Ccu from "../../assets/logos/ccu.png";
+import ChrHansen from "../../assets/logos/chr_hansen.png";
+import Directv from "../../assets/logos/directv.png";
+import Fonterra from "../../assets/logos/fonterra.png";
+import Hsbc from "../../assets/logos/hsbc.png";
+import Iapg from "../../assets/logos/iapg.png";
+import LaCelia from "../../assets/logos/la_celia.png";
+import Quinenco from "../../assets/logos/quinenco.png";
+import Taranto from "../../assets/logos/taranto.png";
+import Unipar from "../../assets/logos/unipar.png";
+import Vital from "../../assets/logos/vital.png";
+import Walmart from "../../assets/logos/walmart.png";
+
+// Logos array
+const logos = [
+  { src: AngelEstrada, alt: "Angel Estrada" },
+  { src: Cabelma, alt: "Cabelma" },
+  { src: Caf, alt: "CAF" },
+  { src: Ccu, alt: "CCU" },
+  { src: ChrHansen, alt: "Chr Hansen" },
+  { src: Directv, alt: "DirecTV" },
+  { src: Fonterra, alt: "Fonterra" },
+  { src: Hsbc, alt: "HSBC" },
+  { src: Iapg, alt: "IAPG" },
+  { src: LaCelia, alt: "La Celia" },
+  { src: Quinenco, alt: "Quinenco" },
+  { src: Taranto, alt: "Taranto" },
+  { src: Unipar, alt: "Unipar" },
+  { src: Vital, alt: "Vital" },
+  { src: Walmart, alt: "Walmart" },
+];
 
 export function Home() {
   const navigate = useNavigate();
@@ -61,7 +96,7 @@ export function Home() {
             {/* Contenido Principal */}
             <div className={styles.content}>
               <div className={styles.textSection}>
-                <h2 className={styles.subtitle}>
+                <h2 className={styles.subtitle} id="quienes-somos">
                   <Trans i18nKey="home:team.title" />
                 </h2>
 
@@ -169,15 +204,6 @@ export function Home() {
                 </p>
               </div>
             </div>
-
-            <div className={styles.videoSection}>
-              <div className={styles.playButton}>
-                <FaVideo className={styles.playIcon} />
-                <span className={styles.videoText}>
-                  <Trans i18nKey="home:section2.videoText" />
-                </span>
-              </div>
-            </div>
           </div>
           <div className={styles.section2Bottom}>
             <div className={styles.servicesFlex}>
@@ -199,7 +225,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className={styles.section3}>
+      <section className={styles.section3} id="nuestro-enfoque">
         <p className={styles.subtitle}>
           <Trans i18nKey="home:section3.subtitle" />
         </p>
@@ -254,11 +280,48 @@ export function Home() {
           </p>
 
           <div className={styles.logosWrapper}>
-            <img src={LaHolando} alt="logo1" />
-            <img src={Walmart} alt="logo2" />
-            <img src={Hsbc} alt="logo3" />
-            <img src={Baggio} alt="logo4" />
-            <img src={Directv} alt="logo5" />
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              spaceBetween={30}
+              slidesPerView={5}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              loop={true}
+              breakpoints={{
+                320: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 25,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 6,
+                  spaceBetween: 20,
+                },
+              }}
+              className={styles.logosCarousel}
+            >
+              {logos.map((logo, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className={styles.logoImage}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>

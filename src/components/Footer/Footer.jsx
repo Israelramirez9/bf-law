@@ -18,10 +18,12 @@ export const Footer = () => {
   if (!ready) return <div>Loading...</div>;
 
   const navigationLinks = [
-    { to: "/", labelKey: "footer:navigation.links.about" },
-    { to: "/areas-practica", labelKey: "footer:navigation.links.practice" },
-    { to: "/nuestro-enfoque", labelKey: "footer:navigation.links.approach" },
-    { to: "/clientes", labelKey: "footer:navigation.links.clients" },
+    { to: "#quienes-somos", labelKey: "footer:navigation.links.about" },
+    {
+      to: "/estudio#areas-practica",
+      labelKey: "footer:navigation.links.practice",
+    },
+    { to: "#nuestro-enfoque", labelKey: "footer:navigation.links.approach" },
     {
       to: "/profesionales",
       labelKey: "footer:navigation.links.professionals",

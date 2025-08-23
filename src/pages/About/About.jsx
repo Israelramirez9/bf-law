@@ -60,7 +60,7 @@ export function About() {
 
       {/* Area de práctica */}
       <div className={styles.section3}>
-        <h2 className={styles.subtitle}>
+        <h2 className={styles.subtitle} id="areas-practica">
           <Trans i18nKey="about:practice.title" />
         </h2>
         <h3>
