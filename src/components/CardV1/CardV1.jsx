@@ -1,7 +1,15 @@
 import { Trans } from "react-i18next";
+import { FaLinkedinIn } from "react-icons/fa";
 import styles from "./CardV1.module.css";
 
-export const CardV1 = ({ title, subtitle, subtitle2, description, image }) => {
+export const CardV1 = ({
+  title,
+  subtitle,
+  subtitle2,
+  description,
+  image,
+  contact,
+}) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageContainer}>
@@ -24,8 +32,28 @@ export const CardV1 = ({ title, subtitle, subtitle2, description, image }) => {
       )}
       {description && (
         <p className={styles.description}>
-          <Trans i18nKey={description} />
+          <Trans
+            i18nKey={description}
+            components={{
+              br: <br />,
+              label: <span style={{ color: "black", fontWeight: 500 }} />,
+            }}
+          />
         </p>
+      )}
+
+      {contact && (
+        <div className={styles.contact}>
+          {contact.linkedin && (
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn size={20} color="#020e4a" />
+            </a>
+          )}
+        </div>
       )}
     </div>
   );

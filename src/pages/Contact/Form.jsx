@@ -18,8 +18,8 @@ export const Form = () => {
 
   const onSubmit = (data) => {
     setIsLoading(true);
-    send("service_69imvmk", "template_wse9m9c", data, {
-      publicKey: "Y1LVETBeRX1Ml60bR",
+    send("service_vrep6b6", "template_luyzrbl", data, {
+      publicKey: "VZPtMDqSyX9qv742p",
     }).then(
       () => {
         alert("Gracias por tu mensaje. Te contactaremos pronto.");

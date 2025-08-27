@@ -9,6 +9,9 @@ export const professionals = [
     subtitle2: "professionals:professional1:subtitle2",
     description: "professionals:professional1:description",
     image: { src: FedericoLayer, alt: "Federico" },
+    contact: {
+      linkedin: "https://www.linkedin.com/in/federico-busso-12a8124/",
+    },
   },
   {
     title: "professionals:professional2:title",
@@ -16,6 +19,9 @@ export const professionals = [
     subtitle2: "professionals:professional2:subtitle2",
     description: "professionals:professional2:description",
     image: { src: ErikaLayer, alt: "Erika" },
+    contact: {
+      linkedin: "https://www.linkedin.com/in/erika-kurdziel-92725395/",
+    },
   },
   {
     title: "professionals:professional3:title",
@@ -23,5 +29,6 @@ export const professionals = [
     subtitle2: "professionals:professional3:subtitle2",
     description: "professionals:professional3:description",
     image: { src: DiegoLayer, alt: "Diego" },
+    contact: { linkedin: "https://www.linkedin.com/in/diego-correa-86267053/" },
   },
 ];
